@@ -1,0 +1,115 @@
+--------------------------------------BLOG SECTION------------------------------------
+  <section class="home-blog py-5 bg-light">
+    <div class="container">
+      <!-- Section Heading -->
+      <h2 class="text-center mb-5 fw-bold">Our Latest Blog Posts</h2>
+
+      <div class="row g-4">
+        <!-- Blog 1 -->
+        <div class="col-md-4">
+          <div class="card blog-card h-100 shadow-sm border-0">
+            <img
+              src="/BLOG/images (1).jpg"
+              class="card-img-top"
+              alt="Welding Safety"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">
+                Engineering innovation in electrical controls and
+                instrumentation
+              </h5>
+              <p class="card-text">
+                In today’s fast-changing world, energy is more than just
+                electricity—it is the lifeline of industries, communities, and
+                economies. Yet, traditional power systems face challenges such
+                as rising demand, environmental concerns, and the need for
+                greater efficiency. Acof, we believe the answer lies in
+                engineering innovation.
+              </p>
+              <a href="blog.html" class="btn btn-outline-primary btn-sm"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="col-md-4">
+          <div class="card blog-card h-100 shadow-sm border-0">
+            <img
+              src="/BLOG/images.jpg"
+              class="card-img-top"
+              alt="Electrical Installation"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">
+                Why Quality Welding & Fabrication Matters
+              </h5>
+              <p class="card-text">
+                In engineering and construction, welding and fabrication are
+                more than just technical processes—they are the backbone of
+                strong, reliable, and lasting structures. From steel bridges and
+                pipelines to industrial plants and energy infrastructure, the
+                quality of welding and fabrication directly determines safety,
+                durability, and overall project success.
+              </p>
+              <a href="blog.html" class="btn btn-outline-primary btn-sm"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="col-md-4">
+          <div class="card blog-card h-100 shadow-sm border-0">
+            <img
+              src="/BLOG/Process-control-instrumentation.jpg"
+              class="card-img-top"
+              alt="Steel Fabrication"
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">
+                The Role of HVAC Systems in Modern Buildings
+              </h5>
+              <p class="card-text">
+                When you walk into an office, shopping mall, hospital, or
+                residential complex, one of the first things you notice—without
+                even realizing it—is the indoor comfort. The cool air on a hot
+                afternoon, the warmth during cold seasons, and the freshness of
+                circulating air all come from one essential system: HVAC.
+              </p>
+              <a href="blog.html" class="btn btn-outline-primary btn-sm"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  ======================================BLOG SECTION==================================
+.home-blog .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.home-blog .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.home-blog .card {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.home-blog .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.home-blog h2 {
+  color: var(--h1-h6); /* Bootstrap primary color */
+}

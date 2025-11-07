@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+:root {
+  /* === BRAND COLORS === */
+  --primary-color: #ff6600; /* Orange */
+  --secondary-color: #1b1b1b;
+  --accent-color: #ff6600;
+  --light-color: #f8f9fa;
+  --dark-color: #1a1a1a;
+  --text-color: #333333;
+  --bg-color: #f8f9fa;
+  --Hover: #0056b3;
+  --pg-color: #555555;
+  --ft-color: #d8d6d6; /* === FEEDBACK COLORS === */
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --bs-primary: #003366; /* Deep Blue */
+  --bs-primary-rgb: 255, 122, 0;
+  --bs-link-color: var(--bs-primary);
+  --bs-link-hover-color: #007bff;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #007bff;
+  --bs-btn-hover-border-color: #007bff;
+} /* === GENERAL USAGE === */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow: hidden;
+} /* === NAVBAR === */
+.navbar {
+  background-color: white;
+}
+.nav-item a {
+  font-size: 0.8rem !important;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #084298 !important;
+} /* === BUTTONS === */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+} /* === TEXT SELECTION === */
+::selection {
+  background-color: var(--primary-color);
+  color: white;
+} /* === SECTION TITLES === */
+.section-title {
+  color: var(--pg-color);
+  font-weight: 700;
+  overflow-y: hidden;
+} /* === LINKS === */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  color: #0056b3;
+} /* === FOOTER === */
+.footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+} /* ===== Navbar Base Styling ===== */
+.navbar {
+  background-color: #ffffff; /* white background */
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+} /* ===== Nav Items ===== */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* pushes nav items to the right */
+}
+.nav-item {
+  position: relative;
+  margin-left: 20px;
+}
+.nav-link {
+  color: #ff7a00 !important;
+  font-weight: 500;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #0056b3;
+}
+.nav-link.active {
+  color: #ff6600;
+} /* ===== Dropdown Styling ===== */
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 1000;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.dropdown-content a:hover {
+  background-color: #0056b3;
+  color: #fff;
+} /* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+} /* ===== Mobile Toggle Fix ===== */
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+} /* Optional: Make dropdown items appear smoothly */
+.dropdown-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+} /* ====================================HERO SECTION============================== */
+.hero-section {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Assets/carouse\ 2.jpg") center center/cover no-repeat; */
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.carousel {
+  width: 100% !important;
+  height: 100vh;
+  margin: 0 !important;
+}
+.carousel-item {
+  height: 100vh !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.carousel-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/asset/images/heroImg1.jpg); /* height: 100% !important; */
+}
+.carousel-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/asset/images/heroImg2.jpg);
+}
+.carousel-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/asset/images/heroImg3.jpg);
+}
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-y: hidden;
+}
+.hero-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  max-width: 600px;
+}
+.hero-section .btn {
+  background-color: #ff7a00;
+  border: none;
+  transition: all 0.3s ease;
+}
+.hero-section .btn:hover {
+  background-color: #084298;
+  transform: translateY(-3px);
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-text {
+    font-size: 1rem;
+  }
+} /* ===========================Innovation=========================== */
+.support-company {
+  background-color: #f8f9fa; /* Light gray background */
+}
+.support-image img {
+  height: 600px;
+  width: 500px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.support-content .section-title {
+  color: #ff7a00; /* Bootstrap primary orange */
+}
+.support-content p {
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+.support-content .btn {
+  background-color: #ff7a00;
+  border: none;
+  transition: all 0.3s ease;
+}
+.support-content .btn:hover {
+  background-color: #084298;
+  transform: translateY(-3px);
+} /* -------------------------------------------Appointment section---------------------------------- */
+.appointment {
+  position: relative; /* establish stacking for pseudo-element */
+  height: 50vh;
+  min-height: 300px;
+  overflow: visible; /* allow children to overflow section */
+  display: flex;
+  align-items: center;
+  padding: 1rem; /* background image with overlay - use your real path */
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("/asset/images/appointment.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 70%; /* you said you wanted smaller than cover */
+  background-attachment: fixed;
+} /* Create the slanted blue shape as a background layer */
+.appointment::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 0; /* fill the section */
+  left: 0;
+  width: 60%; /* width of the blue area */
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: 1; /* make the right edge a backward-slash (top-right pulled down) */
+  clip-path: polygon(0 0, 80% 0%, 100% 100%, 0 100%);
+  pointer-events: none; /* allow clicks through if needed */
+}
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 100%; /* move the text a bit right so it visually overlaps the slant */
+  margin-left: 3rem;
+}
+.appointment button {
+  background-color: var(--primary-color);
+} /* ======================================SERVICE SECTION================================= */
+.service-card {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.service-img {
+  width: 200%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.service-card .card-body {
+  padding: 20px;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+.btn-outline-primary {
+  color: #ff7a00;
+  border-color: #ff7a00;
+}
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+.slash-divider {
+  width: 100vw;
+  height: 120px; /* adjust the height you want */
+  background-color: #ebe9e8;
+  overflow: hidden;
+  position: relative;
+}
+.slash-line {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 30px;
+  color: #ff7a00;
+  animation: slideText 30s linear infinite;
+} /* Keyframes for sliding motion */
+@keyframes slideText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+} /* =========================================PROJECT SECTION=========================== */ /* Project Section Slider */
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slide-track {
+  display: flex;
+  width: calc(250px * 20); /* width for number of slides */
+  animation: scroll 40s linear infinite;
+}
+.slide {
+  width: 300px;
+  margin: 0 15px;
+  flex-shrink: 0;
+}
+.slide img {
+  width: 300%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.slide img:hover {
+  transform: scale(1.05);
+} /* Animation for continuous scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 10));
+  }
+} /* Responsive Adjustments */
+@media (max-width: 768px) {
+  .slide {
+    width: 180px;
+  }
+  .slide img {
+    height: 140px;
+  }
+  .slide-track {
+    animation: scroll 30s linear infinite;
+  }
+}
+#team .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.client-slider {
+  background: #f8f9fa;
+}
+.client-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.client-logo:hover {
+  transform: scale(1.1);
+}
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+} /* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+} /* Section Overlay (optional for better text contrast) */
+section.position-relative::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+section.position-relative > .container {
+  position: relative;
+  z-index: 1;
+}
+.slider-track {
+  display: flex;
+  width: calc(250px * 18); /* width for smooth scroll */
+  animation: scrollClients 25s linear infinite;
+}
+.client-item {
+  text-align: center;
+  flex: 0 0 auto;
+}
+@keyframes scrollClients {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} /* Floating WhatsApp B
+utton */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+} /* Section Overlay (optional for better text contrast) */
+section.position-relative::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+section.position-relative > .container {
+  position: relative;
+  z-index: 1;
+}
+.contact-form {
+  background-color: white !important;
+  z-index: 100;
+  /* width: 50%; */
+  text-align: center;
+  padding: 20px 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.contact-form h1 {
+  font-size: 2rem;
+  color: var(--Hover);
+}
+.contact-form i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  padding: 0.5rem 0;
+}
+.contact-form p {
+  font-size: 0.8rem;
+  max-width: 400px;
+  margin: auto;
+}
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  color: black;
+  outline: none;
+}
+.contact-form button {
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
