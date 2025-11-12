@@ -241,41 +241,84 @@ a:hover {
   transform: translateY(-3px);
 } /* -------------------------------------------Appointment section---------------------------------- */
 .appointment {
-  position: relative; /* establish stacking for pseudo-element */
+  position: relative;
   height: 50vh;
   min-height: 300px;
-  overflow: visible; /* allow children to overflow section */
+  overflow: visible;
   display: flex;
   align-items: center;
-  padding: 1rem; /* background image with overlay - use your real path */
+  padding: 1rem;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url("/asset/images/appointment.jpg");
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 70%; /* you said you wanted smaller than cover */
-  background-attachment: fixed;
-} /* Create the slanted blue shape as a background layer */
+  background-size: 70%;
+  background-attachment: fixed; /* Desktop only */
+}
+
+/* Blue slanted overlay */
 .appointment::before {
   content: "";
   position: absolute;
-  inset: 0 0 0 0; /* fill the section */
+  inset: 0;
   left: 0;
-  width: 60%; /* width of the blue area */
+  width: 60%;
   height: 100%;
   background-color: var(--primary-color);
-  z-index: 1; /* make the right edge a backward-slash (top-right pulled down) */
+  z-index: 1;
   clip-path: polygon(0 0, 80% 0%, 100% 100%, 0 100%);
-  pointer-events: none; /* allow clicks through if needed */
+  pointer-events: none;
 }
+
 .content {
   position: relative;
   z-index: 2;
-  max-width: 100%; /* move the text a bit right so it visually overlaps the slant */
+  max-width: 100%;
   margin-left: 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
+
 .appointment button {
   background-color: var(--primary-color);
-} /* ======================================SERVICE SECTION================================= */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+}
+
+/* ---------- Responsive (Mobile) ---------- */
+@media screen and (max-width: 768px) {
+  .appointment {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* fixes the dark gray issue */
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .appointment::before {
+    width: 0;
+    height: 0;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .appointment p {
+    max-width: 100%;
+  }
+}
+/* ======================================SERVICE SECTION================================= */
 .service-card {
   overflow: hidden;
   border-radius: 10px;
