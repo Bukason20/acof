@@ -1,8 +1,8 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 :root {
   /* === BRAND COLORS === */
@@ -30,20 +30,18 @@
   --bs-btn-hover-bg: #e96a00;
   --bs-btn-hover-border-color: #e96a00;
 }
-
-/* ===== Navbar Base Styling ===== */
+/* ===== Navbar ===== */
 .navbar {
-  background-color: #ffffff; /* white background */
+  background-color: #fff;
   padding: 15px 30px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 /* ===== Nav Items ===== */
 .navbar-nav {
   list-style: none;
   display: flex;
   align-items: center;
-  margin-left: auto; /* pushes nav items to the right */
+  margin-left: auto;
 }
 
 .nav-item {
@@ -52,36 +50,41 @@
 }
 
 .nav-link {
-  color: #ff7a00;
+  color: #ff7a00 !important;
   font-weight: 500;
   padding: 8px 15px;
-  transition: all 0.3s ease;
   text-decoration: none;
-}
-.nav-link:hover{
-    color: #042352;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color:  #084298;
+  color: #0056b3 !important;
 }
-
-/* ===== Dropdown Styling ===== */
+.nav-item .btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+/* ===== Dropdown ===== */
 .dropdown {
   position: relative;
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
   min-width: 180px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #fff;
   border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+
+  /* animation effect */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  display: none;
 }
 
 .dropdown-content a {
@@ -93,16 +96,18 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #ff7a00;
+  background: #0056b3;
   color: #fff;
 }
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* ===== Mobile Toggle Fix ===== */
+/* ===== Mobile Toggle ===== */
 .navbar-toggler {
   border: none;
 }
@@ -110,21 +115,6 @@
 .navbar-toggler:focus {
   box-shadow: none;
 }
-
-/* Optional: Make dropdown items appear smoothly */
-.dropdown-content {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
- 
-  
 /* =================================================project Hero========================================== */
 .project-hero {
   background: url(/PROJECT/project\ bck.jpg) center/cover no-repeat;
@@ -137,16 +127,17 @@
 .project-hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .project-hero-content {
   position: relative;
   z-index: 1;
 }
-
 
 header h1 {
   font-size: 2.2rem;
@@ -171,7 +162,7 @@ header p {
 .work-card {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -184,7 +175,6 @@ header p {
   width: 400px;
   height: 350px;
   object-fit: cover;
-
 }
 
 .work-content {
@@ -202,4 +192,3 @@ header p {
   font-size: 0.9rem;
   color: #555;
 }
-

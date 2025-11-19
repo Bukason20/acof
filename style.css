@@ -40,86 +40,65 @@ h4,
 h5,
 h6 {
   overflow: hidden;
-} /* === NAVBAR === */
+}
+/* ===== Navbar ===== */
 .navbar {
-  background-color: white;
-}
-.nav-item a {
-  font-size: 0.8rem !important;
-}
-.nav-link:hover,
-.nav-link.active {
-  color: #084298 !important;
-} /* === BUTTONS === */
-.btn-primary {
-  background-color: var(--primary-color);
-  border: none;
-}
-.btn-primary:hover {
-  background-color: #0056b3;
-} /* === TEXT SELECTION === */
-::selection {
-  background-color: var(--primary-color);
-  color: white;
-} /* === SECTION TITLES === */
-.section-title {
-  color: var(--pg-color);
-  font-weight: 700;
-  overflow-y: hidden;
-} /* === LINKS === */
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-a:hover {
-  color: #0056b3;
-} /* === FOOTER === */
-.footer {
-  background-color: var(--dark-color);
-  color: var(--light-color);
-} /* ===== Navbar Base Styling ===== */
-.navbar {
-  background-color: #ffffff; /* white background */
+  background-color: #fff;
   padding: 15px 30px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-} /* ===== Nav Items ===== */
+}
+
+/* ===== Nav Items ===== */
 .navbar-nav {
   list-style: none;
   display: flex;
   align-items: center;
-  margin-left: auto; /* pushes nav items to the right */
+  margin-left: auto;
 }
+
 .nav-item {
   position: relative;
   margin-left: 20px;
 }
+
 .nav-link {
   color: #ff7a00 !important;
   font-weight: 500;
   padding: 8px 15px;
-  transition: all 0.3s ease;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
-.nav-link:hover {
-  color: #0056b3;
-}
+
+.nav-link:hover,
 .nav-link.active {
-  color: #ff6600;
-} /* ===== Dropdown Styling ===== */
+  color: #0056b3 !important;
+}
+.nav-item .btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+/* ===== Dropdown ===== */
 .dropdown {
   position: relative;
 }
+
 .dropdown-content {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
   min-width: 180px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
   border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+
+  /* animation effect */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  display: none;
 }
+
 .dropdown-content a {
   display: block;
   padding: 10px 15px;
@@ -127,29 +106,29 @@ a:hover {
   text-decoration: none;
   transition: background 0.3s ease;
 }
+
 .dropdown-content a:hover {
-  background-color: #0056b3;
+  background: #0056b3;
   color: #fff;
-} /* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-} /* ===== Mobile Toggle Fix ===== */
-.navbar-toggler {
-  border: none;
 }
-.navbar-toggler:focus {
-  box-shadow: none;
-} /* Optional: Make dropdown items appear smoothly */
-.dropdown-content {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
+
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
   opacity: 1;
   transform: translateY(0);
-} /* ====================================HERO SECTION============================== */
+}
+
+/* ===== Mobile Toggle ===== */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ====================================HERO SECTION============================== */
 .hero-section {
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Assets/carouse\ 2.jpg") center center/cover no-repeat; */
   min-height: 100vh;
@@ -229,7 +208,6 @@ a:hover {
 }
 .support-content p {
   line-height: 1.7;
-  font-size: 0.9rem;
 }
 .support-content .btn {
   background-color: #ff7a00;
@@ -382,6 +360,7 @@ a:hover {
   width: 300px;
   margin: 0 15px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 .slide img {
   width: 300%;
@@ -513,7 +492,6 @@ section.position-relative > .container {
   padding: 0.5rem 0;
 }
 .contact-form p {
-  font-size: 0.8rem;
   max-width: 400px;
   margin: auto;
 }
