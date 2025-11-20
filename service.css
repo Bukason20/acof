@@ -334,3 +334,13 @@
   font-size: 0.85rem;
   color: #aaa;
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}

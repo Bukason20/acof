@@ -225,6 +225,7 @@ h6 {
   overflow: visible;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url("/asset/images/appointment.jpg");
@@ -259,7 +260,7 @@ h6 {
   color: white;
 }
 
-.appointment button {
+.appointment a {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -267,6 +268,7 @@ h6 {
   font-weight: bold;
   padding: 0.75rem 1.25rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* ---------- Responsive (Mobile) ---------- */
@@ -277,6 +279,7 @@ h6 {
     background-position: center;
     background-attachment: scroll; /* fixes the dark gray issue */
     flex-direction: column;
+    justify-content: center;
     padding: 2rem 1rem;
   }
 
